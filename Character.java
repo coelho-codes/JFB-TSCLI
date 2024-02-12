@@ -12,6 +12,7 @@ class Character {
     Character(String name, int age, String gender, double height, double weight, String skinColor, String eyesColor, String hairSize) {
         this.name = name;
         this.age = age;
+        this.gender = gender;
         this.height = height;
         this.weight = weight;
         this.skinColor = skinColor;
