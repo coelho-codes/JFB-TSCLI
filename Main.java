@@ -29,7 +29,9 @@ class Main {
 
     public void game(Main main, Scanner scanner) {
         System.out.println("\nStarting game.");
+
         String loading = "loading";
+        //Simulates a loading screen
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
                 loading += ".";
@@ -46,7 +48,25 @@ class Main {
         System.out.println();
         System.out.println();
 
-        main.create(scanner); //Returns a character(with it's attributes)
+        Character character = main.create(scanner); //main.create() returns a character(with it's attributes)
+
+        //Simulates a loading screen
+        String initializing = "Initializing world";
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                initializing += ".";
+                System.out.print("\r" + initializing);
+                try {
+                    Thread.sleep(1100);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            initializing = "Initializing world";
+        }
+
+        System.out.println("\nWorld successfully created!");
+        System.out.println("You may now interact with the world... Happy gaming!");
     }
 
     public void menu(Scanner scanner, Main main) {
@@ -127,6 +147,10 @@ class Main {
         }
 
         Character character = new Character(name, age, gender, height, weight, skinColor, eyesColor, hairSize);
+
+        System.out.println("\033[H\033[2J");
+        System.out.println("Your character was successfully created!!");
+        System.out.println();
 
         return character;
     }
