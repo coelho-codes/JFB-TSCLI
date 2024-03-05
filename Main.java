@@ -26,7 +26,8 @@ class Main {
     }
 
     public void game(Character character, Main main) {
-        //This will be where the game logic is.
+        System.out.println("Starting game.");
+        
     }
 
     public void menu(Scanner scanner, Main main, Character character) {
