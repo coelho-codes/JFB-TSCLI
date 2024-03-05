@@ -1,10 +1,12 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 class Main {
     public static void main(String args[]) {
         Main main = new Main();
         String input;
         Scanner scanner = new Scanner(System.in);
+        scanner.useLocale(Locale.US);
 
         System.out.println("\033[H\033[2J"); //Clears the console
         System.out.println("Welcome to The Sims in CLI!");
@@ -33,7 +35,7 @@ class Main {
                 loading += ".";
                 System.out.print("\r" + loading);
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(800);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -93,24 +95,34 @@ class Main {
 
         System.out.println("Start by creating your character!");
 
-        //I have no idea how I could've messed this up but somehow I did
-        while(true) {
-            System.out.println("Full name: ");
+        for(;;) {
+            System.out.println("\nYour character's full name: ");
             name = scanner.nextLine();
+
             System.out.println("\nAge: ");
             age = scanner.nextInt();
-            System.out.println("\nGender: ");
+            scanner.nextLine();
+
+            System.out.println("\nGender[Male of female]: ");
             gender = scanner.nextLine();
+
             System.out.println("\nHeight: ");
             height = scanner.nextDouble();
+            scanner.nextLine();
+
             System.out.println("\nWeight: ");
             weight = scanner.nextDouble();
-            System.out.println("\nSkin color: ");
+            scanner.nextLine();
+
+            System.out.println("\nSkin color[White, brown or black]: ");
             skinColor = scanner.nextLine();
-            System.out.println("\nEyes color: ");
+
+            System.out.println("\nEyes color[Blue, brown or green]: ");
             eyesColor = scanner.nextLine();
-            System.out.println("\nHair size: ");
+
+            System.out.println("\nHair size[Big, medium or short]: ");
             hairSize = scanner.nextLine();
+            
             break;
         }
 
