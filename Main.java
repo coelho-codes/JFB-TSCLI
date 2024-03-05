@@ -26,8 +26,20 @@ class Main {
     }
 
     public void game(Character character, Main main) {
-        System.out.println("Starting game.");
-        
+        System.out.println("\nStarting game.");
+        String loading = "loading";
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                loading += ".";
+                System.out.print("\r" + loading);
+                try {
+                    Thread.sleep(500);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+            loading = "loading";
+        }
     }
 
     public void menu(Scanner scanner, Main main, Character character) {
