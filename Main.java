@@ -57,7 +57,7 @@ class Main {
                 initializing += ".";
                 System.out.print("\r" + initializing);
                 try {
-                    Thread.sleep(1100);
+                    Thread.sleep(1200);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -66,7 +66,7 @@ class Main {
         }
 
         System.out.println("\nWorld successfully created!");
-        System.out.println("You may now interact with the world... Happy gaming!");
+        System.out.println("You may now interact with the world... Happy gaming!"); //Stop point so far
     }
 
     public void menu(Scanner scanner, Main main) {

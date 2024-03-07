@@ -1,0 +1,9 @@
+Idea Description: 
+
+The idea is to create a game, in CLI environment, that simulates a The Sims game. This means that there will be a character and character creation, objects in the world to "interact with", other characters, a Sim's needs and actions, and so on. Obviously, this will be a simple game, since it's using CLI. But, some sort of complexity is welcome to the system.
+
+==================================================
+
+Version 1.0(prototype):
+
+To be able to create a character, and have this character to exist in the "world", being able to interact with objects, have actions and needs.
